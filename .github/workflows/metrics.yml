@@ -20,13 +20,9 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: America/Toronto
           plugin_achievements: yes
-          plugin_achievements_display: detailed
+          plugin_achievements_display: compact
           plugin_achievements_secrets: yes
-          plugin_achievements_threshold: C
-          plugin_code: yes
-          plugin_code_lines: 12
-          plugin_code_load: 100
-          plugin_code_visibility: public
+          plugin_achievements_threshold: B
           plugin_habits: yes
           plugin_habits_days: 30
           plugin_habits_facts: yes
@@ -51,4 +47,4 @@ jobs:
           plugin_music_limit: 3          # Limit to 4 entries, maximum is 50 for "top" mode with spotify
           plugin_music_top_type: tracks  # Set type for "top" mode; either tracks or artists
           plugin_music_time_range: medium # Set time range for "top" mode; either short (4 weeks), medium (6 months) or long (several years)
-          plugin_music_token: "${{ secrets.CLIENT_ID }}, ${{ secrets.CLIENT_SECRET }}, ${{ secrets.REFRESH_TOKEN }}"
+          plugin_music_token: ${{ secrets.CLIENT_ID }}, ${{ secrets.CLIENT_SECRET }}, ${{ secrets.REFRESH_TOKEN }}
